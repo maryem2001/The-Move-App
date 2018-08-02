@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C000A8021121C8C00571967 /* filtersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C000A7F21121C8C00571967 /* filtersViewController.swift */; };
+		4C000A82211229E000571967 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C000A81211229E000571967 /* homePage.swift */; };
+		4C0A585721136C8300ADDD13 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A585621136C8300ADDD13 /* Preferences.swift */; };
+		4C0A585A211373C900ADDD13 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A5859211373C900ADDD13 /* Settings.swift */; };
+		4C0A585C211373F600ADDD13 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A585B211373F600ADDD13 /* ContactUs.swift */; };
+		4C0A585E21137E5F00ADDD13 /* MoveEventDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A585D21137E5F00ADDD13 /* MoveEventDisplay.swift */; };
+		4C0A58602113B5BE00ADDD13 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A585F2113B5BE00ADDD13 /* Saved.swift */; };
 		4C4305AB2107E49F0087A5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4305AA2107E49F0087A5C2 /* AppDelegate.swift */; };
 		4C4305AD2107E49F0087A5C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4305AC2107E49F0087A5C2 /* ViewController.swift */; };
 		4C4305B02107E49F0087A5C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4305AE2107E49F0087A5C2 /* Main.storyboard */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C000A7F21121C8C00571967 /* filtersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filtersViewController.swift; sourceTree = "<group>"; };
+		4C000A81211229E000571967 /* homePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; };
+		4C0A585621136C8300ADDD13 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		4C0A5859211373C900ADDD13 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4C0A585B211373F600ADDD13 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
+		4C0A585D21137E5F00ADDD13 /* MoveEventDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveEventDisplay.swift; sourceTree = "<group>"; };
+		4C0A585F2113B5BE00ADDD13 /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
 		4C4305A72107E49E0087A5C2 /* The Move.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Move.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4305AA2107E49F0087A5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4305AC2107E49F0087A5C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0A58582113738100ADDD13 /* Fake Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C4305BC2108F46E0087A5C2 /* mapViewController.swift */,
+				4C4305BF2108F5610087A5C2 /* mapAreaEventsFeed.swift */,
+				4C4305C12108F5820087A5C2 /* mapIndividualEvent.swift */,
+				4C4305C32108F59B0087A5C2 /* randomGeneratorViewController.swift */,
+				4C4305C52108F5B60087A5C2 /* randomGeneratorIndividualEvent.swift */,
+				4C4305C72108F5CC0087A5C2 /* savedViewController.swift */,
+				4C4305C92108F5E40087A5C2 /* savedIndividualEvent.swift */,
+				4C000A7F21121C8C00571967 /* filtersViewController.swift */,
+			);
+			path = "Fake Views";
+			sourceTree = "<group>";
+		};
 		4C43059E2107E49E0087A5C2 = {
 			isa = PBXGroup;
 			children = (
@@ -82,13 +111,13 @@
 		4C4305BE2108F4830087A5C2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C4305BC2108F46E0087A5C2 /* mapViewController.swift */,
-				4C4305BF2108F5610087A5C2 /* mapAreaEventsFeed.swift */,
-				4C4305C12108F5820087A5C2 /* mapIndividualEvent.swift */,
-				4C4305C32108F59B0087A5C2 /* randomGeneratorViewController.swift */,
-				4C4305C52108F5B60087A5C2 /* randomGeneratorIndividualEvent.swift */,
-				4C4305C72108F5CC0087A5C2 /* savedViewController.swift */,
-				4C4305C92108F5E40087A5C2 /* savedIndividualEvent.swift */,
+				4C000A81211229E000571967 /* homePage.swift */,
+				4C0A585621136C8300ADDD13 /* Preferences.swift */,
+				4C0A5859211373C900ADDD13 /* Settings.swift */,
+				4C0A585B211373F600ADDD13 /* ContactUs.swift */,
+				4C0A585D21137E5F00ADDD13 /* MoveEventDisplay.swift */,
+				4C0A585F2113B5BE00ADDD13 /* Saved.swift */,
+				4C0A58582113738100ADDD13 /* Fake Views */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -166,13 +195,20 @@
 			files = (
 				4C4305CA2108F5E40087A5C2 /* savedIndividualEvent.swift in Sources */,
 				4C4305C62108F5B60087A5C2 /* randomGeneratorIndividualEvent.swift in Sources */,
+				4C0A585A211373C900ADDD13 /* Settings.swift in Sources */,
+				4C0A585721136C8300ADDD13 /* Preferences.swift in Sources */,
 				4C4305BD2108F46E0087A5C2 /* mapViewController.swift in Sources */,
+				4C000A82211229E000571967 /* homePage.swift in Sources */,
 				4C4305C42108F59B0087A5C2 /* randomGeneratorViewController.swift in Sources */,
 				4C4305AD2107E49F0087A5C2 /* ViewController.swift in Sources */,
 				4C4305C02108F5610087A5C2 /* mapAreaEventsFeed.swift in Sources */,
+				4C0A58602113B5BE00ADDD13 /* Saved.swift in Sources */,
+				4C000A8021121C8C00571967 /* filtersViewController.swift in Sources */,
 				4C4305AB2107E49F0087A5C2 /* AppDelegate.swift in Sources */,
+				4C0A585E21137E5F00ADDD13 /* MoveEventDisplay.swift in Sources */,
 				4C4305C82108F5CC0087A5C2 /* savedViewController.swift in Sources */,
 				4C4305C22108F5820087A5C2 /* mapIndividualEvent.swift in Sources */,
+				4C0A585C211373F600ADDD13 /* ContactUs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
