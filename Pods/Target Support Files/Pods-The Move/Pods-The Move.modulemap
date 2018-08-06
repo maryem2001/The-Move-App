@@ -1,0 +1,6 @@
+framework module Pods_The_Move {
+  umbrella header "Pods-The Move-umbrella.h"
+
+  export *
+  module * { export * }
+}
