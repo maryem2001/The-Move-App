@@ -1,5 +1,5 @@
 //
-//  UserService3.swift
+//  UserService.swift
 //  The Move
 //
 //  Created by Maryem W Ali on 8/6/18.
@@ -11,10 +11,10 @@ import FirebaseAuth.FIRUser
 import FirebaseDatabase
 
 struct UserService {
+   
+    
     static func create(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
         let userAttrs = ["username": username]
-        
-        
         let ref = Database.database().reference().child("users").child(firUser.uid)
         ref.setValue(userAttrs) { (error, ref) in
             if let error = error {
@@ -27,6 +27,16 @@ struct UserService {
                 completion(user)
             })
         }
+    }
+    static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
+        let ref = Database.database().reference().child("users").child(uid)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let user = User(snapshot: snapshot) else {
+                return completion(nil)
+            }
+            
+            completion(user)
+        })
     }
 
 

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 class homePage: UIViewController {
 
@@ -31,6 +32,9 @@ class homePage: UIViewController {
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var contactUsButton: UIButton!
     
+    @IBOutlet weak var nameOfUserLabel: UILabel!
+        
+    
     @IBOutlet weak var profilePic: UIImageView!
     
     @IBAction func generateButton(_ sender: Any) {
@@ -38,6 +42,10 @@ class homePage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = Auth.auth().currentUser
+        
+        self.nameOfUserLabel.text = user?.displayName
         
         self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2
         self.profilePic.clipsToBounds = true

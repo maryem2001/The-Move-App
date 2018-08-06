@@ -23,7 +23,7 @@ class Preferences : UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         present(savedAlert, animated: true, completion: nil)
-        savedAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        
     }
     let savedAlert = UIAlertController(title: "Saved", message: "Prefernce changes have been saved.", preferredStyle: UIAlertControllerStyle.alert)
     
@@ -34,6 +34,7 @@ class Preferences : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        savedAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
 //        present(savedAlert, animated: true, completion: nil)
 //         savedAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
