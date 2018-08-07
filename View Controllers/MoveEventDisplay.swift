@@ -8,12 +8,36 @@
 
 import Foundation
 import UIKit
-// import FoursquareAPIClient
-// import Alamofire
 import SwiftyJSON
+import CoreLocation
 
 
 class MoveEventDisplay: UIViewController{
+    
+//    func getData() {
+//        view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
+//        let url = "https://api.foursquare.com/v2/venues/search"
+//        //        let deviceLocation = CLLocation()
+//
+//        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"coffee", "limit":"10"]) { responseObject, error in
+//            guard let responseObject = responseObject, error == nil else {
+//                print(error ?? "Unknown error")
+//                return
+//            }
+//            //            print(responseObject.count)
+//            let number = arc4random_uniform(9)
+//
+//            let data = JSON(responseObject)
+//
+//            let response = data["response"]["venues"]["name"]
+//            print(response)
+//            //            let number = arc4random_uniform(9)
+//            ////            print(number)
+//
+//            //            self.moveTitle.text = "\(response)" // assign your outlet here with what you got from the json response
+//        }
+//    }
+
     
     
     @IBOutlet weak var headerLabel: UILabel!
@@ -21,6 +45,9 @@ class MoveEventDisplay: UIViewController{
     @IBOutlet weak var moveView: UIView!
     @IBOutlet weak var moveImage: UIImageView!
     @IBOutlet weak var moveTitle: UILabel!
+//        self.moveTitle.text = "\(response)" // assign your outlet here with what you got from the json response
+    
+    
     @IBOutlet weak var moveDescription: UILabel!
     
     @IBOutlet weak var shareButton: UIButton!
@@ -41,10 +68,10 @@ class MoveEventDisplay: UIViewController{
         let request = URLRequest(url: components.url!)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data,                            // is there data
-                let response = response as? HTTPURLResponse,  // is there HTTP response
-                (200 ..< 300) ~= response.statusCode,         // is statusCode 2XX
-                error == nil else {                           // was there no error, otherwise ...
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                (200 ..< 300) ~= response.statusCode,
+                error == nil else {
                     completion(nil, error)
                     return
             }
@@ -57,53 +84,47 @@ class MoveEventDisplay: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
-        let url = "https://api.foursquare.com/v2/venues/search"
+        
+        getData()
+    }
+
     
-        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"coffee", "limit":"10"]) { responseObject, error in
-            guard let responseObject = responseObject, error == nil else {
-                print(error ?? "Unknown error")
-                return
-            }
-            print(responseObject.count)
-            let data = JSON(responseObject)
-            print(data)
-            
-            // use `responseObject` here
-        }    }
-//        let client = FoursquareAPIClient(clientId: "NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", clientSecret: "EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", version:"20180323")
-//        let parameter: [String: String] = [
-//            "ll": "40.7243,-74.0018",
-//            "limit": "10",
-//            ];
-//
-//        client.request(path: "v2/venues/explore", parameter: parameter) {
-//            [weak self] result in
-//
-//            switch result {
-//
-//            case let .success(data):
-//                // parse the JSON data with NSJSONSerialization or Lib like SwiftyJson
-//                // let json = JSON(data: data) // e.g. {"meta":{"code":200},"notifications":[{"...
-//                let json = data
-//                print(data)
-//
-//            case let .failure(error):
-//                // Error handling
-//                switch error {
-//                case let .connectionError(connectionError):
-//                    print(connectionError)
-//                case let .apiError(apiError):
-//                    print(apiError.errorType)   // e.g. endpoint_error
-//                    print(apiError.errorDetail) // e.g. The requested path does not exist.
-//                case .responseParseError(_):
-//                    print("Some error")
-//                }
-//            }
-//        }
-//    }
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func getData() {
+        view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
+        let url = "https://api.foursquare.com/v2/venues/search"
+//        let deviceLocation = CLLocation()
+
+        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"places", "limit":"100"]) { responseObject, error in
+            guard let responseObject = responseObject, error == nil else {
+                print(error ?? "Unknown error")
+                return
+            }
+//            print(responseObject.count)
+            let number = Int(arc4random_uniform(99))
+
+            let data = JSON(responseObject)
+
+            let moveName = data["response"]["venues"][number]["name"]
+            print(moveName)
+//            let number = arc4random_uniform(9)
+////            print(number)
+            DispatchQueue.main.async {
+                self.moveTitle.text = "\(moveName)" // assign your outlet here with what you got from the json response
+            }
+        }
+    }
+    
+    @IBAction func refreshButton(_ sender: Any) {
+        getData()
+    }
+    
 }

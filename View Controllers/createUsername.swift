@@ -18,6 +18,9 @@ class CreateUsernameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
+       
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -42,3 +45,4 @@ class CreateUsernameViewController: UIViewController {
 }
 }
 }
+

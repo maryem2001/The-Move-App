@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         -> Bool {
             FirebaseApp.configure()
             
-            // 1
-            let storyboard = UIStoryboard(name: "Login", bundle: .main)
+            //TODO: Change back to login later
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
             
             // 2
             if let initialViewController = storyboard.instantiateInitialViewController() {
