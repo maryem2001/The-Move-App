@@ -11,6 +11,11 @@ target 'The Move' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
 
+  pod 'FoursquareAPIClient', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON'
+
+
 end
 
 
