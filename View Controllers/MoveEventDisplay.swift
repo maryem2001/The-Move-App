@@ -102,8 +102,8 @@ class MoveEventDisplay: UIViewController{
         view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
         let url = "https://api.foursquare.com/v2/venues/search"
 //        let deviceLocation = CLLocation()
-
-        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"places", "limit":"100"]) { responseObject, error in
+//let variable = UITextField.text
+        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"food", "limit":"100"]) { responseObject, error in
             guard let responseObject = responseObject, error == nil else {
                 print(error ?? "Unknown error")
                 return

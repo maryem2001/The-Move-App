@@ -29,13 +29,13 @@ class homePage: UIViewController {
         
     }
     
-    @IBOutlet weak var settingsButton: UIButton!
+
     @IBOutlet weak var contactUsButton: UIButton!
     
     @IBOutlet weak var nameOfUserLabel: UILabel!
         
     
-    @IBOutlet weak var profilePic: UIImageView!
+    //@IBOutlet weak var profilePic: UIImageView!
     
     @IBAction func generateButton(_ sender: Any) {
  
@@ -48,8 +48,8 @@ class homePage: UIViewController {
         
         self.nameOfUserLabel.text = user?.displayName
         
-        self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2
-        self.profilePic.clipsToBounds = true
+        //self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2
+        //self.profilePic.clipsToBounds = true
        
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowRadius = 4
@@ -74,12 +74,12 @@ extension UIView {
     }
 }
 
-extension UIImageView {
-    func roundedImage() {
-        self.layer.cornerRadius = self.frame.size.width / 2
-        self.clipsToBounds = true
-    }
-}
+//extension UIImageView {
+//    func roundedImage() {
+//        self.layer.cornerRadius = self.frame.size.width / 2
+//        self.clipsToBounds = true
+//    }
+//}
 //
 //extension generateButton{
 //    func vibrate(){
