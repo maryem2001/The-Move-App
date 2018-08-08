@@ -99,7 +99,7 @@ class MoveEventDisplay: UIViewController{
     }
     
     func getData() {
-        view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
+        view.setGradiantBackground(colorOne:UIColor(red: 0.0/225.0, green:181.0/225.0, blue: 245.0/225.0, alpha: 1.0), colorTwo:UIColor(red: 119.0/225.0, green:28.0/225.0, blue: 250.0/225.0, alpha:1.0))
         let url = "https://api.foursquare.com/v2/venues/search"
 //        let deviceLocation = CLLocation()
 //let variable = UITextField.text

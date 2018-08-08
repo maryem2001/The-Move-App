@@ -55,7 +55,7 @@ class homePage: UIViewController {
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowRadius = 4
 
-        view.setGradiantBackground(colorOne:UIColor(red: 89.0/225.0, green:38.0/225.0, blue: 197.0/225.0, alpha: 1.0), colorTwo: .red)
+        view.setGradiantBackground(colorOne:UIColor(red: 0.0/225.0, green:181.0/225.0, blue: 245.0/225.0, alpha: 1.0), colorTwo:UIColor(red: 119.0/225.0, green:28.0/225.0, blue: 250.0/225.0, alpha:1.0))
         menuView.backgroundColor=UIColor(red: 131.0/225.0, green:149.0/225.0, blue: 167.0/225.0, alpha: 0.85)
         navigationController?.navigationBar.isTranslucent = false
     }
@@ -66,7 +66,7 @@ extension UIView {
         let gradiantLayer = CAGradientLayer()
         gradiantLayer.frame = bounds
         gradiantLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
-        gradiantLayer.locations = [0.0,2.75]
+        gradiantLayer.locations = [0.0,0.85]
         gradiantLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradiantLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
         

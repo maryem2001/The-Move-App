@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             FirebaseApp.configure()
             
             //TODO: Change back to login later
-            let storyboard = UIStoryboard(name: "Login", bundle: .main)
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
             if let initialViewController = storyboard.instantiateInitialViewController() {
                 window?.rootViewController = initialViewController
                 window?.makeKeyAndVisible()
