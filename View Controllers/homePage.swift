@@ -33,7 +33,8 @@ class homePage: UIViewController {
     @IBOutlet weak var contactUsButton: UIButton!
     
     @IBOutlet weak var nameOfUserLabel: UILabel!
-        
+    @IBOutlet weak var username: UILabel!
+    
     
     //@IBOutlet weak var profilePic: UIImageView!
     
@@ -45,8 +46,8 @@ class homePage: UIViewController {
         super.viewDidLoad()
         
         let user = Auth.auth().currentUser
-        
         self.nameOfUserLabel.text = user?.displayName
+//        self.username.text = user?.username
         
         //self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2
         //self.profilePic.clipsToBounds = true

@@ -103,13 +103,13 @@ class MoveEventDisplay: UIViewController{
         let url = "https://api.foursquare.com/v2/venues/search"
 //        let deviceLocation = CLLocation()
 //let variable = UITextField.text
-        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"food", "limit":"100"]) { responseObject, error in
+        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"tourist location", "limit":"20"]) { responseObject, error in
             guard let responseObject = responseObject, error == nil else {
                 print(error ?? "Unknown error")
                 return
             }
 //            print(responseObject.count)
-            let number = Int(arc4random_uniform(99))
+            let number = Int(arc4random_uniform(19))
 
             let data = JSON(responseObject)
 
