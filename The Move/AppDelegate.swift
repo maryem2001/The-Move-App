@@ -29,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
     }
 
+    var moveType = "Food"
+
+    
 }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

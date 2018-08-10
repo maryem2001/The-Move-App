@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C000A8021121C8C00571967 /* filtersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C000A7F21121C8C00571967 /* filtersViewController.swift */; };
 		4C000A82211229E000571967 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C000A81211229E000571967 /* homePage.swift */; };
+		4C091940211DFC70001306B2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09193F211DFC70001306B2 /* Common.swift */; };
 		4C0A585721136C8300ADDD13 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A585621136C8300ADDD13 /* Preferences.swift */; };
 		4C0A585A211373C900ADDD13 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A5859211373C900ADDD13 /* Settings.swift */; };
 		4C0A585C211373F600ADDD13 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A585B211373F600ADDD13 /* ContactUs.swift */; };
@@ -41,6 +42,7 @@
 		2C0220C1776176269FB3846E /* Pods-The Move.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Move.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Move/Pods-The Move.release.xcconfig"; sourceTree = "<group>"; };
 		4C000A7F21121C8C00571967 /* filtersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filtersViewController.swift; sourceTree = "<group>"; };
 		4C000A81211229E000571967 /* homePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; };
+		4C09193F211DFC70001306B2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4C0A585621136C8300ADDD13 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4C0A5859211373C900ADDD13 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4C0A585B211373F600ADDD13 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4305AA2107E49F0087A5C2 /* AppDelegate.swift */,
+				4C09193F211DFC70001306B2 /* Common.swift */,
 				4C4305A82107E49E0087A5C2 /* Products */,
 				4CEC1EC52118291700FB94FE /* models */,
 				4CEC1EC62118292700FB94FE /* services */,
@@ -390,6 +393,7 @@
 				4C4305AB2107E49F0087A5C2 /* AppDelegate.swift in Sources */,
 				4C0A585E21137E5F00ADDD13 /* MoveEventDisplay.swift in Sources */,
 				4C4305C82108F5CC0087A5C2 /* savedViewController.swift in Sources */,
+				4C091940211DFC70001306B2 /* Common.swift in Sources */,
 				4C4305C22108F5820087A5C2 /* mapIndividualEvent.swift in Sources */,
 				4C59B77221189B4C00D339F7 /* createUsername.swift in Sources */,
 				4C59B76A21182B1B00D339F7 /* Login.swift in Sources */,
@@ -543,6 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92AZ2V3U3V;
 				INFOPLIST_FILE = "$(SRCROOT)/The Move/supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,6 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92AZ2V3U3V;
 				INFOPLIST_FILE = "$(SRCROOT)/The Move/supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

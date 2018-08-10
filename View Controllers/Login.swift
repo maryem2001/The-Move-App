@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseUI
 import FirebaseDatabase
 
+
 typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
@@ -22,6 +23,17 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
   
+//        self.delegate = self
+//
+//        DispatchQueue.main.async {
+//            if FIRAuth.auth()?.currentUser == nil {
+//                let loginController = LoginController()
+//                let navController = UINavigationController(rootViewController: loginController)
+//                self.present(navController, animated: true, completion: nil)
+//            }
+//            return
+//        }
+//
         view.setGradiantBackground(colorOne:UIColor(red: 0.0/225.0, green:181.0/225.0, blue: 245.0/225.0, alpha: 1.0), colorTwo:UIColor(red: 119.0/225.0, green:28.0/225.0, blue: 250.0/225.0, alpha:1.0))
     }
     
@@ -39,6 +51,16 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: FUIAuthDelegate {
+   
+//    AuthUI.getInstance().createSignInIntentBuilder().setProviders(
+//    AuthUI.EMAIL_PROVIDER,
+//    AuthUI.FACEBOOK_PROVIDER)
+//    **.setTheme(R.style.SuperAppTheme)**
+//    .build(),
+//    RC_SIGN_IN);
+    
+
+    
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         if let error = error {
             assertionFailure("Error signing in: \(error.localizedDescription)")
@@ -81,6 +103,5 @@ extension LoginViewController: FUIAuthDelegate {
         }
     }
     }
-        
 
 

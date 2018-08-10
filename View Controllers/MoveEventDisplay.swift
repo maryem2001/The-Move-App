@@ -91,6 +91,9 @@ class MoveEventDisplay: UIViewController{
     
     
     
+//var moveType = "Food"
+    
+    
     
     
     
@@ -103,7 +106,10 @@ class MoveEventDisplay: UIViewController{
         let url = "https://api.foursquare.com/v2/venues/search"
 //        let deviceLocation = CLLocation()
 //let variable = UITextField.text
-        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018",  "query":"tourist location", "limit":"20"]) { responseObject, error in
+        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018", "query":"\(Common.Global.moveType)", "limit":"20"])
+            //change query input to var moveType
+
+            { responseObject, error in
             guard let responseObject = responseObject, error == nil else {
                 print(error ?? "Unknown error")
                 return
