@@ -11,7 +11,7 @@ import UIKit
 class Common: NSObject {
 
     struct Global {
-        static var moveType = "Food"
+        static var moveType = "Resturaunt"
     }
     
 }

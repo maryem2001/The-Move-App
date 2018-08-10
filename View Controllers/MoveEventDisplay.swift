@@ -43,10 +43,12 @@ class MoveEventDisplay: UIViewController{
     @IBOutlet weak var headerLabel: UILabel!
     
     @IBOutlet weak var moveView: UIView!
-    @IBOutlet weak var moveImage: UIImageView!
-    @IBOutlet weak var moveTitle: UILabel!
-//        self.moveTitle.text = "\(response)" // assign your outlet here with what you got from the json response
+    @IBOutlet weak var moveImageView: UIImageView!
     
+
+    
+    @IBOutlet weak var moveTitle: UILabel!
+    var venueID = String()
     
     @IBOutlet weak var moveDescription: UILabel!
     
@@ -85,52 +87,131 @@ class MoveEventDisplay: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getData()
+        getData {
+            self.getImage(venueid: self.venueID)
+        }
     }
-
-    
-    
-    
-//var moveType = "Food"
-    
-    
-    
-    
-    
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func getData() {
+                let number = Int(arc4random_uniform(9))
+    
+
+
+    func getData(completion: @escaping () -> Void) {
         view.setGradiantBackground(colorOne:UIColor(red: 0.0/225.0, green:181.0/225.0, blue: 245.0/225.0, alpha: 1.0), colorTwo:UIColor(red: 119.0/225.0, green:28.0/225.0, blue: 250.0/225.0, alpha:1.0))
         let url = "https://api.foursquare.com/v2/venues/search"
-//        let deviceLocation = CLLocation()
-//let variable = UITextField.text
-        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018", "query":"\(Common.Global.moveType)", "limit":"20"])
-            //change query input to var moveType
 
-            { responseObject, error in
+        sendRequest(url, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "v":"20180323", "ll":"40.7243,-74.0018", "query":"\(Common.Global.moveType)", "limit":"10"])
+            {
+                responseObject, error in
             guard let responseObject = responseObject, error == nil else {
                 print(error ?? "Unknown error")
                 return
             }
-//            print(responseObject.count)
-            let number = Int(arc4random_uniform(19))
+             
+           
+            let number = Int(arc4random_uniform(9))
 
             let data = JSON(responseObject)
 
             let moveName = data["response"]["venues"][number]["name"]
-            print(moveName)
-//            let number = arc4random_uniform(9)
-////            print(number)
-            DispatchQueue.main.async {
-                self.moveTitle.text = "\(moveName)" // assign your outlet here with what you got from the json response
+               let venue  = data["response"]["venues"][number]["id"].stringValue
+                self.venueID = venue
+                let prefix = data["response"]["venues"][number]["categories"][0]["icon"]["prefix"].stringValue
+                
+                completion()
+                
+                
+              
+            
+//                let moveImage = data["response"]["venues"]["photos"][number]["groups"]["items"]["source"]["url"]
+//                print(moveImage)
+
+                
+                DispatchQueue.main.async {
+                self.moveTitle.text = "\(moveName)"
+//
+                    
             }
         }
     }
     
-    @IBAction func refreshButton(_ sender: Any) {
-        getData()
+    func bestGetImageFunction(){
+        
+         let photoUrl = "https://api.foursquare.com/v2/venues/VENUE_ID/photos"
+        let  parameters = ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN","VENUE_ID": self.venueID, "group":"venue", "limit":"10", "offset":"10","v":"20180323"]
+        
+        var components = URLComponents(string: photoUrl)!
+        
+        components.queryItems = parameters.map { (key, value) in
+            URLQueryItem(name: key, value: value)
+        }
+        
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        let request = URLRequest(url: components.url!)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                (200 ..< 300) ~= response.statusCode,
+                error == nil else {
+                   
+                    return
+            }
+            
+            let responseObject = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any]
+            let json = JSON(responseObject)
+            
+        }
+        task.resume()
+        
+        
     }
     
+    func getImage(venueid: String) {
+        let photoUrl = "https://api.foursquare.com/v2/venues/\(venueid)/photos"
+        sendRequest(photoUrl, parameters: ["client_id":"NPURXZD5UHU41GBJENB5T0MGY5JAWNBU5J0OGBGRZKMTRH4W", "client_secret":"EC4DQKQROMEQJTQGYCY204DN2YEQMJARL5XPOVWWK2NTN3CN", "group":"venue", "limit":"10", "offset":"10","v":"20180323"])
+        {
+            responseObject, error in
+            guard let responseObject = responseObject, error == nil else {
+                print(error ?? "Unknown error")
+                return
+            }
+        let data = JSON(responseObject)
+         let prefix = data["response"]["photos"]["items"][0]["prefix"].stringValue
+        let  suffix = data["response"]["photos"]["items"][0]["suffix"].stringValue
+        let  width = data["response"]["photos"]["items"][0]["width"].stringValue
+        let  height = data["response"]["photos"]["items"][0]["height"].stringValue
+        
+            do{
+            let imageURL = "\(prefix)\(width)x\(height)\(suffix)"
+            let imagedata = try Data(contentsOf: URL(string: imageURL)!)
+            let image = UIImage(data: imagedata)
+           
+         
+          
+        
+        DispatchQueue.main.async {
+            //self.moveImageView.image = UIImage(named: moveImage[1])
+             self.moveImageView.image = image!
+            
+        }
+        }
+            catch{
+                print("bummerrr")
+            }
+    }
+    }
+    
+    @IBAction func refreshButton(_ sender: Any) {
+        getData {
+            self.getImage(venueid: self.venueID)
+        }
+    
+    }
+    
+
 }

@@ -68,7 +68,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="fXT-Ys-fly"/>
+                        <viewLayoutGuide key="safeArea" id="TYy-zt-MPw"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJW-8v-bp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="1rV-U8-nUL"/>
+                        <viewLayoutGuide key="safeArea" id="Upo-8T-ubf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="e0f-4X-7Ph"/>
                 </viewController>
@@ -138,7 +138,7 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="4uA-5y-vRZ"/>
+                        <viewLayoutGuide key="safeArea" id="FRM-zu-txV"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cna-7J-M7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,7 +183,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="LTJ-3f-jDh"/>
+                        <viewLayoutGuide key="safeArea" id="dai-AQ-iRk"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ni4-L8-jLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,7 +223,7 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Frs-6d-p8j"/>
+                        <viewLayoutGuide key="safeArea" id="ckK-5o-70R"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hus-qt-XRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -269,7 +269,7 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="wup-8K-6Xz"/>
+                        <viewLayoutGuide key="safeArea" id="4It-jg-f9r"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="9FT-ka-yyh"/>
                     <connections>
@@ -302,7 +302,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="abn-3Q-KPi"/>
+                        <viewLayoutGuide key="safeArea" id="vbU-V7-psd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="ItW-YV-qgR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -319,7 +319,7 @@
             </objects>
             <point key="canvasLocation" x="-408" y="4385"/>
         </scene>
-        <!--The Move-->
+        <!--Home Page-->
         <scene sceneID="JNj-MS-Jo5">
             <objects>
                 <viewController id="FV3-tN-ZuP" customClass="homePage" customModule="The_Move" customModuleProvider="target" sceneMemberID="viewController">
@@ -327,13 +327,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's the move?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrH-bT-dmj">
-                                <rect key="frame" x="34" y="124" width="306" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's The Move?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrH-bT-dmj">
+                                <rect key="frame" x="29" y="86" width="317" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQG-2z-IZ0">
+                                <rect key="frame" x="81" y="269" width="213" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="White Random Box"/>
+                                <connections>
+                                    <action selector="generateButton:" destination="FV3-tN-ZuP" eventType="touchUpInside" id="U9t-nK-Kyg"/>
+                                    <segue destination="3Q0-uW-sce" kind="show" id="tkm-Cr-ez3"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-pH-3cq">
                                 <rect key="frame" x="0.0" y="64" width="150" height="603"/>
                                 <subviews>
@@ -367,32 +377,26 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.54267043961997652" green="0.76398931395787906" blue="1" alpha="0.59527504280821919" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.46666666666666667" green="0.10980392156862745" blue="0.98039215686274506" alpha="0.39961472602739728" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="GuJ-RI-YDx"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQG-2z-IZ0">
-                                <rect key="frame" x="79" y="265" width="217" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="White Random Box"/>
-                                <connections>
-                                    <action selector="generateButton:" destination="FV3-tN-ZuP" eventType="touchUpInside" id="U9t-nK-Kyg"/>
-                                    <segue destination="3Q0-uW-sce" kind="show" id="tkm-Cr-ez3"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.52186846733093262" blue="0.1495496928691864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fDx-pH-3cq" firstAttribute="leading" secondItem="xSb-tq-BKM" secondAttribute="leading" constant="-150" id="8cr-hq-GaW"/>
-                            <constraint firstItem="fDx-pH-3cq" firstAttribute="top" secondItem="xSb-tq-BKM" secondAttribute="top" id="i4o-OK-yre"/>
-                            <constraint firstItem="fDx-pH-3cq" firstAttribute="bottom" secondItem="xSb-tq-BKM" secondAttribute="bottom" id="igw-E8-4dB"/>
+                            <constraint firstItem="fDx-pH-3cq" firstAttribute="leading" secondItem="82M-IK-FwM" secondAttribute="leading" constant="-150" id="8cr-hq-GaW"/>
+                            <constraint firstItem="fDx-pH-3cq" firstAttribute="top" secondItem="82M-IK-FwM" secondAttribute="top" id="i4o-OK-yre"/>
+                            <constraint firstItem="fDx-pH-3cq" firstAttribute="bottom" secondItem="82M-IK-FwM" secondAttribute="bottom" id="igw-E8-4dB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xSb-tq-BKM"/>
+                        <viewLayoutGuide key="safeArea" id="82M-IK-FwM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="The Move" id="3tx-4r-Zfi">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="LO3-na-ZEp">
+                    <navigationItem key="navigationItem" id="3tx-4r-Zfi">
+                        <barButtonItem key="leftBarButtonItem" tag="-48" title="Item" image="Image-1" id="LO3-na-ZEp">
+                            <inset key="imageInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="landscapeImageInsets" minX="20" minY="0.0" maxX="-50" maxY="0.0"/>
+                            <inset key="largeContentSizeImageInsets" minX="1" minY="7" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" red="0.46666666670000001" green="0.10980392160000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="openMenu:" destination="FV3-tN-ZuP" id="Rlt-1q-oAH"/>
                             </connections>
@@ -407,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ins-ro-xVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="4413"/>
+            <point key="canvasLocation" x="380" y="4412.7436281859073"/>
         </scene>
         <!--Move Event Display-->
         <scene sceneID="Qmf-iJ-Ctj">
@@ -417,13 +421,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THIS IS THE MOVE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uB-PY-whB">
-                                <rect key="frame" x="33" y="82" width="308" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkw-Pn-eCj">
                                 <rect key="frame" x="36" y="133" width="302" height="336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -435,6 +432,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08X-FR-QML">
+                                        <rect key="frame" x="31" y="137" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -475,12 +476,20 @@
                                     <action selector="refreshButton:" destination="3Q0-uW-sce" eventType="touchUpInside" id="dH8-9F-CEO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THIS IS THE MOVE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uB-PY-whB">
+                                <rect key="frame" x="33" y="64" width="308" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8aP-EV-URX"/>
+                        <viewLayoutGuide key="safeArea" id="yJ9-MO-NEd"/>
                     </view>
                     <connections>
                         <outlet property="headerLabel" destination="3uB-PY-whB" id="9gK-Wt-De5"/>
+                        <outlet property="moveImageView" destination="08X-FR-QML" id="LZn-qv-GWP"/>
                         <outlet property="moveTitle" destination="BZR-nD-Cje" id="cjB-dH-wx3"/>
                         <outlet property="moveView" destination="tkw-Pn-eCj" id="OQe-rf-chS"/>
                         <outlet property="shareButton" destination="wm7-lv-8BI" id="jsf-Fa-hIC"/>
@@ -588,7 +597,7 @@
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.30588235289999999" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="8eT-I2-V0J"/>
+                        <viewLayoutGuide key="safeArea" id="eyB-q9-vyC"/>
                     </view>
                     <connections>
                         <outlet property="ageLabel" destination="Rgr-p6-Lki" id="vYM-Oj-yEt"/>
@@ -649,7 +658,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.43489583329999998" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="bc8-Ar-5Ey"/>
+                        <viewLayoutGuide key="safeArea" id="s5A-7b-UWs"/>
                     </view>
                     <connections>
                         <outlet property="feedbackMessageLabel" destination="dGe-TZ-aLM" id="LER-Y7-H8U"/>
@@ -692,7 +701,7 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Nel-5h-4Yv"/>
+                        <viewLayoutGuide key="safeArea" id="xtz-rJ-GiK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Ebc-Ny-MnY"/>
                 </viewController>
@@ -738,7 +747,7 @@
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Hl9-uF-hVB"/>
+                        <viewLayoutGuide key="safeArea" id="bDY-9F-oIL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ay2-Mb-mK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -771,7 +780,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3hX-XW-MPz"/>
+                        <viewLayoutGuide key="safeArea" id="LDj-8H-KSG"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txL-Dh-KwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -798,7 +807,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image-1" width="170" height="170"/>
         <image name="Random Generator Box Icon" width="200" height="200"/>
         <image name="White Random Box" width="154" height="180"/>
     </resources>
+    <color key="tintColor" red="0.46666666666666667" green="0.10980392156862745" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

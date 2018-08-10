@@ -43,11 +43,11 @@ class Preferences : UIViewController {
         switch moveTypeSelect.selectedSegmentIndex
         {
         case 0:
-            Common.Global.moveType = "Food";
+            Common.Global.moveType = "Resturaunt";
         case 1:
-            Common.Global.moveType = "Club";
+            Common.Global.moveType = "Night Club";
         case 2:
-            Common.Global.moveType = "Play";
+            Common.Global.moveType = "Arcade";
         default:
             break
         }

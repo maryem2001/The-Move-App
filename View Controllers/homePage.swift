@@ -12,6 +12,7 @@ import FirebaseAuth
 
 class homePage: UIViewController {
 
+    
     var menuShowing = false
     
     @IBOutlet weak var menuView: UIView!
@@ -38,8 +39,8 @@ class homePage: UIViewController {
     
     //@IBOutlet weak var profilePic: UIImageView!
     
-    @IBAction func generateButton(_ sender: Any) {
- 
+    @IBAction func generateButton(_ sender: UIButton) {
+        sender.shake()
     }
     
     override func viewDidLoad() {
@@ -56,7 +57,7 @@ class homePage: UIViewController {
         menuView.layer.shadowRadius = 4
 
         view.setGradiantBackground(colorOne:UIColor(red: 0.0/225.0, green:181.0/225.0, blue: 245.0/225.0, alpha: 1.0), colorTwo:UIColor(red: 119.0/225.0, green:28.0/225.0, blue: 250.0/225.0, alpha:1.0))
-        menuView.backgroundColor=UIColor(red: 131.0/225.0, green:149.0/225.0, blue: 167.0/225.0, alpha: 0.85)
+        menuView.backgroundColor=UIColor(red: 119.0/225.0, green:28.0/225.0, blue: 250.0/225.0, alpha: 0.45)
         navigationController?.navigationBar.isTranslucent = false
     }
 }
